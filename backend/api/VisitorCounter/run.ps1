@@ -22,9 +22,8 @@ else {
     $visitorCount++
     Write-Host "New visitorCount: $visitorCount"
 
-    $responseObject = @{
-        VisitorCount = $visitorCount
-    }
+    $responseObject = $visitorCount
+    
 
     $responseJson = ConvertTo-Json -InputObject $responseObject
  
