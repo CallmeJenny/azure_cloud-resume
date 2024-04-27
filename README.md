@@ -5,3 +5,7 @@ Creating my own azure resume for the cloud challenge, follwoing [ACG project vid
 
 - Frontend folder contains the website.
 - main.js contains visitor counter code.
+
+## Backend
+
+- api folder contains Azure function written in powershell (VisitorCounter).
