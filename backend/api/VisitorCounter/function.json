@@ -1,0 +1,38 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "Request",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "Response"
+    },
+    {
+      "name": "CosmosIn",
+      "databaseName": "Azureresume",
+      "containerName": "Counter",
+      "connection": "CosmosDBConnection",
+      "sqlQuery": "SELECT * FROM c WHERE c.id = \"1\"",
+      "direction": "in",
+      "type": "cosmosDB",
+      "partitionKey": "1"
+    },
+    {
+      "name": "cosmosOut",
+      "direction": "out",
+      "type": "cosmosDB",
+      "databaseName": "Azureresume",
+      "containerName": "Counter",
+      "connection": "CosmosDBConnection",
+      "partitionKey": "1"
+    }
+  ]
+}
