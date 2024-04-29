@@ -6,15 +6,15 @@ const functionApiURL = "https://getvisitorcount-cloudresume.azurewebsites.net/ap
 const localFunctionApi = "http://localhost:7071/api/VisitorCounter";
 
 const getVisitCount = () => {
-    let count = 30;
+    let visitorCount = 30;
     fetch(functionApiURL).then(response => {
         return response.json()
     }).then(response =>{
         console.log("Website called function API.");
-        count = response.visitorcount;
-        document.getElementById("counter").innerText = count;
+        visitorCount = response;
+        document.getElementById("counter").innerText = visitorCount;
     }).catch(function(error){
         console.log(error);
     });
-    return count;
+    return visitorCount;
 }
